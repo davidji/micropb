@@ -23,7 +23,12 @@
 
 #![allow(clippy::result_unit_err)]
 
-use core::{mem::MaybeUninit, ops::Deref};
+use core::{
+    mem::MaybeUninit, 
+    ops::Deref, 
+    marker::{ Copy, Sized }, 
+    result::Result 
+};
 
 /// Basic container trait required for all multi-element containers, except for maps.
 pub trait PbContainer: Sized {
